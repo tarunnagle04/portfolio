@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" />
+          <ul>
+            <!-- <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li> -->
+          </ul>
+        </nav>
+        <div class="header-text"></div>
+        <h1>
+          I'm <span>Tarun Nagle</span><br />an Engineering Graduate <br />looking for an opportunity
+          to<br />work with an IT company
+        </h1>
+      </div>
+    </div>
+    <!-- ------------ABOUT MYSELF----------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/bb.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>I am Tarun Nagle, I am looking for an opportunity to work with an IT company.</p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="openTab('Skills')">Skills</p>
+              <p class="tab-links " onclick="openTab('Education')">Education</p>
+              <p class="tab-links " onclick="openTab('Experience')">Experience</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+              <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li>Pursuing Masters in Technology <br />in Specialization in CAD/CAM</li>
+                <li>
+                  Completed Bachelors of Technology<br />in Specialization in <br />Mechanical
+                  Engineering <br>with 84.6% 
+                </li>
+                <li>Completed XII with 78%</li>
+                <li>Completed X with 76%</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Experience">
+              <ul>
+                <li>Fresher</li>
+                <li>Design Patent</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-link");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function openTab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
